@@ -1,0 +1,178 @@
+{
+    "usernameScenarios" :
+    {
+        "scenarios":
+        [
+            {
+                "id": 1,
+                "name" : "invalid username",
+                "typeOfScenario" : "negative",
+                "useFaker" : false ,
+                "typeOfFaker" : "",
+                "dataSource" : "Mockaroo",
+                "typeOfDataSource" : "Pool de datos pseudo aleatorio",
+                "data" :
+                    [
+                        {"item":"mbtham0@aboutads.info"},
+                        {"item":"edouglas1@ameblo.jp"},
+                        {"item":"djacobsen2@moonfruit.com"}
+                    ]
+            },
+            {
+                "id": 2,
+                "name" : "empty username" ,
+                "typeOfScenario" : "negative",
+                "useFaker" : false ,
+                "typeOfFaker" : "",
+                "dataSource" : "Manual",
+                "typeOfDataSource" : "Pool de datos A priori",
+                "data": 
+                    [
+                        {"item" : ""}
+                    ]
+            },
+            {
+                "id": 3,
+                "name" : "username longer than 191chars" ,
+                "typeOfScenario" : "negative",
+                "useFaker" : false ,
+                "typeOfFaker" : "",
+                "dataSource" : "Mockaroo+Manual",
+                "typeOfDataSource" : "Pool de datos pseudo aleatorio",
+                "data" :
+                [
+                    {"item":"mbtham0mbtham0mbtham0mbtham0mbtham0mbtham0mbtham0mbtham0mbtham0mbtham0mbtham0mbtham0mbtham0mbtham0mbtham0mbtham0mbtham0mbtham0mbtham0mbtham0mbtham0mbtham0mbtham0mbtham0mbtham0mbtham0mbtham0mbtham0mbtham0mbtham0mbtham0mbtham0@aboutads.info"},
+                    {"item":"edouglas1edouglas1edouglas1edouglas1edouglas1edouglas1edouglas1edouglas1edouglas1edouglas1edouglas1edouglas1edouglas1edouglas1edouglas1edouglas1edouglas1edouglas1edouglas1edouglas1edouglas1edouglas1edouglas1edouglas1edouglas1edouglas1edouglas1edouglas1@ameblo.jp"},
+                    {"item":"djacobsen2djacobsen2djacobsen2djacobsen2djacobsen2djacobsen2djacobsen2djacobsen2djacobsen2djacobsen2djacobsen2djacobsen2djacobsen2djacobsen2djacobsen2djacobsen2djacobsen2djacobsen2djacobsen2djacobsen2djacobsen2djacobsen2djacobsen2djacobsen2@moonfruit.com"}                    
+                ]
+            },            
+            {
+                "id": 4,
+                "name" : "valid username" ,
+                "typeOfScenario" : "positive",
+                "useFaker" : false ,
+                "typeOfFaker" : "",
+                "dataSource" : "Manual",
+                "typeOfDataSource" : "Pool de datos A priori",
+                "data": 
+                    [
+                        {"item" : "r.garcia3@uniandes.edu.co"}
+                    ]
+            },            
+            {
+                "id": 5,
+                "name" : "invalid random username" ,
+                "typeOfScenario" : "negative",
+                "useFaker" : true ,
+                "fakerItems" : 3 ,
+                "typeOfFaker" : "email",
+                "dataSource" : "Faker",
+                "typeOfDataSource" : "Datos aleatorios",
+                "data": []
+            }
+            ,            
+            {
+                "id": 6,
+                "name" : "username sql injection " ,
+                "typeOfScenario" : "negative",
+                "useFaker" : false ,
+                "typeOfFaker" : "",
+                "dataSource" : "Manual",
+                "typeOfDataSource" : "Pool de datos A priori",
+                "data": [
+                    {"item" : "12' or '1'='1'" },
+                    {"item" : "?;DROPTABLE emp_master;" }
+                ]
+            }
+        ]
+
+    },
+    "passwordScenarios" :
+    {
+        "scenarios":
+        [
+            {
+                "id": 1,
+                "name" : "invalid password",
+                "typeOfScenario" : "negative",
+                "useFaker" : false ,
+                "typeOfFaker" : "",
+                "dataSource" : "Mockaroo",
+                "typeOfDataSource" : "Pool de datos pseudo aleatorio",
+                "data" :
+                    [
+                        {"item":"4bp1ROivPMk"},
+                        {"item":"uB0pgit"},
+                        {"item":"lzianJ1Ux"}
+                    ]
+            },
+            {
+                "id": 2,
+                "name" : "empty password" ,
+                "typeOfScenario" : "negative",
+                "useFaker" : false ,
+                "typeOfFaker" : "",
+                "dataSource" : "Manual",
+                "typeOfDataSource" : "Pool de datos A priori",
+                "data": 
+                    [
+                        {"item" : ""}
+                    ]
+            },
+            {
+                "id": 3,
+                "name" : "password longer than 60 chars" ,
+                "typeOfScenario" : "negative",
+                "useFaker" : false ,
+                "typeOfFaker" : "",
+                "dataSource" : "Mockaroo",
+                "typeOfDataSource" : "Pool de datos pseudo aleatorio",
+                "data" :
+                    [
+                        {"item":"Qxr9IAyuZMRZI2e2KFQxrkTl4Il3xubgsIVSr5yJQNzli2wQHl2yz5BWCHV725a"},
+                        {"item":"IKqSKHRc8ERYFavypqjSyYlN4lYm5aO0HeS1xPqYtb3MzMfHULYHVxLO7ebMPBt"},
+                        {"item":"OF7zJNw5Oa5quJlxwXzoOywBlcr2Iwu0c6wl1d1FtraKjLZV7xIprjEwtfqQ9Fd"}
+                    ]
+            },            
+            {
+                "id": 4,
+                "name" : "valid password" ,
+                "typeOfScenario" : "positive",
+                "useFaker" : false ,
+                "typeOfFaker" : "",
+                "dataSource" : "Manual",
+                "typeOfDataSource" : "Pool de datos A priori",
+                "data": 
+                    [
+                        {"item" : "abcde12345"}
+                    ]
+            },            
+            {
+                "id": 5,
+                "name" : "invalid random password" ,
+                "typeOfScenario" : "negative",
+                "useFaker" : true ,
+                "fakerItems" : 3,
+                "typeOfFaker" : "password",
+                "dataSource" : "Faker",
+                "typeOfDataSource" : "Datos aleatorios",
+                "data": []
+            }
+            ,            
+            {
+                "id": 6,
+                "name" : "password sql injection" ,
+                "typeOfScenario" : "negative",
+                "useFaker" : false ,
+                "typeOfFaker" : "",
+                "dataSource" : "Manual",
+                "typeOfDataSource" : "Pool de datos A priori",
+                "data": [
+                    {"item" : "12' or '1'='1'" },
+                    {"item" : "?;DROPTABLE emp_master;" }
+                ]
+            }
+        ]
+
+    }    
+}

@@ -1,0 +1,11 @@
+{
+	"video" : false,
+	"trashAssetsBeforeRuns" : true,
+	"modifyObstructiveCode": true,
+	"experimentalSourceRewriting": true,
+	"chromeWebSecurity" : false ,
+	"ghostVersion" : "3.40.5" ,
+	"baseGhostURL" : "http://localhost:2368/" ,
+	"username" : "example@example.com" , 
+	"password" : "example123"
+}
